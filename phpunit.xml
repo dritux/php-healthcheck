@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+    colors = "true"
+    convertErrorsToExceptions="true"
+    convertNoticesToExceptions="true"
+    convertWarningsToExceptions="true"
+    stopOnFailure = "false"
+    bootstrap="vendor/autoload.php">
+
+    <testsuites>
+        <testsuite name="Dr Hc">
+            <directory>./tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">./src/Hc</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="./report/html" lowUpperBound="50" highLowerBound="80" />
+        <log type="junit" target="./.tmp/report.junit.xml" />
+        <log type="coverage-text" target="./.tmp/coverage.txt" />
+        <log type="coverage-html" target="./.tmp/html" />
+        <log type="coverage-clover" target="./.tmp/clover.xml" />
+    </logging>
+</phpunit>

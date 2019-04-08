@@ -1,0 +1,5 @@
+*.log
+/vendor
+.tmp
+.php_cs.cache
+.phpunit.result.cache
